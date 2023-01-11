@@ -1,7 +1,5 @@
 using UnityEngine;
 
-
-[RequireComponent(typeof(Camera))]
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private int _damage = 10;

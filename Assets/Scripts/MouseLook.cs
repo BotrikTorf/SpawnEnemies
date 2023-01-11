@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Transform))]
 public class MouseLook : MonoBehaviour
 {
     [SerializeField] private float _mouseSentivity = 500f;
