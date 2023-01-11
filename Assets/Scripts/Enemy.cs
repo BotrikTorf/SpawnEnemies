@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.AI;
 
+[RequireComponent(typeof(NavMeshAgent))]
+
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health = 20;
 
-    private NavMeshAgent _aiAgent;
     private GameObject _character;
+    private NavMeshAgent _aiAgent;
 
     public void TakeDamege(int amount)
     {

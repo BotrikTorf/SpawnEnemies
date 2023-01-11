@@ -267,7 +267,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dead21cfc787381438cbf2cfbbd1f599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemyPrefab: {fileID: 1606481000577614330, guid: fed3a1c4068f89145a7511906c5300db, type: 3}
+  _enemyPrefab: {fileID: 1606481000577614332, guid: fed3a1c4068f89145a7511906c5300db, type: 3}
   _creationPeriod: 3
   _radius: 48
 --- !u!4 &955074765

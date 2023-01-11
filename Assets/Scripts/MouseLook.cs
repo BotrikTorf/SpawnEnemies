@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Transform))]
 public class MouseLook : MonoBehaviour
 {
     [SerializeField] private float _mouseSentivity = 500f;
@@ -7,13 +8,13 @@ public class MouseLook : MonoBehaviour
 
     private float _xRotation;
 
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         _xRotation = 0f;
     }
 
-    void Update()
+    private void Update()
     {
         float mouseX = Input.GetAxis("Mouse X") * _mouseSentivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * _mouseSentivity * Time.deltaTime;
