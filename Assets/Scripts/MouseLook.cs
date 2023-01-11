@@ -6,6 +6,9 @@ public class MouseLook : MonoBehaviour
     [SerializeField] private Transform _playerBody;
 
     private float _xRotation;
+    private float _xRotationMax = 90f;
+    private float _xRotationMin = -90f;
+
 
     private void Start()
     {
@@ -19,7 +22,7 @@ public class MouseLook : MonoBehaviour
         float mouseY = Input.GetAxis("Mouse Y") * _mouseSentivity * Time.deltaTime;
 
         _xRotation -= mouseY;
-        _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
+        _xRotation = Mathf.Clamp(_xRotation, _xRotationMin, _xRotationMax);
 
         transform.localRotation = Quaternion.Euler(_xRotation, 0f, 0f);
 

@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent(typeof(NavMeshAgent))]
-
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int _health = 20;
@@ -18,11 +17,9 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
     }
 
-    private void Start()
-    {
-        _aiAgent = gameObject.GetComponent<NavMeshAgent>();
-        _character = GameObject.FindGameObjectWithTag("Player");
-    }
+    public void SetTarget(GameObject target) => _character = target;
+
+    private void Start() => _aiAgent = GetComponent<NavMeshAgent>();
 
     private void FixedUpdate() => _aiAgent.SetDestination(_character.transform.position);
 }
